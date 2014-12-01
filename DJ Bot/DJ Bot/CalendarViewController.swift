@@ -14,9 +14,6 @@ class CalendarViewController: UITableViewController {
     var days :[BotDay]?
     var selectedDay:BotDay?
     
-   
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,13 +35,28 @@ class CalendarViewController: UITableViewController {
         return 0
     }
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("CalendarCell") as UITableViewCell
-        var day = days![indexPath.row]
-        cell.textLabel.text = day.displayName;
-        return cell;
+        
+        if(indexPath.row == 0){
+            var cell = tableView.dequeueReusableCellWithIdentifier("TodayCell") as TodayCell
+            var day = days![indexPath.row]
+            cell.titleLabel.text = day.displayName
+            return cell
+        }else{
+            var cell = tableView.dequeueReusableCellWithIdentifier("DayCell") as DayCell
+            var day = days![indexPath.row]
+            cell.titleLabel.text = day.displayName
+            return cell
+        }    
+       
     }
-    
-    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        if(indexPath.row == 0){
+            return 132
+        }else{
+            return 44
+        }
+    }
+    // MARK : segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "DaySegue"){
             //get view controller and set the selected day

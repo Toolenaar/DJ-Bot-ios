@@ -27,8 +27,8 @@ class GenresViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCellWithIdentifier("GenreCell") as UITableViewCell
-        cell.textLabel.text = genres[indexPath.row]
+        var cell = tableView.dequeueReusableCellWithIdentifier("GenreCell") as GenreCell
+        cell.titleLabel.text = genres[indexPath.row]
         return cell;
     }
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
