@@ -166,10 +166,10 @@
             </objects>
             <point key="canvasLocation" x="1810" y="951"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Music Bar Navigation Controller-->
         <scene sceneID="Cyy-IV-DLk">
             <objects>
-                <navigationController id="PeK-oV-TSR" sceneMemberID="viewController">
+                <navigationController id="PeK-oV-TSR" customClass="MusicBarNavigationController" customModule="DJ_Bot" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="pej-yG-kwb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

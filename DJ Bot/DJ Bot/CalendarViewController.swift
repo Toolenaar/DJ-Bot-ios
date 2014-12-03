@@ -22,8 +22,15 @@ class CalendarViewController: UITableViewController {
         var botDay2 = BotDay(title: "SomeDay", date: "29-11-2014".toDate(format: "dd-MM-yyyy")!)
         var botDay3 = BotDay(title: "SomeDay", date: "28-11-2014".toDate(format: "dd-MM-yyyy")!)
         days = [botDay1,botDay2,botDay3]
-
+        
     }
+    // MARK : view
+    override func viewWillAppear(animated: Bool) {
+        //test to show the view TODO: let it react to music playback and only show when playing music
+        let navController = self.navigationController as MusicBarNavigationController
+        navController.showMusicPlayerBar()
+    }
+    
     
     // MARK : tableview
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,6 +41,7 @@ class CalendarViewController: UITableViewController {
         
         return 0
     }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         if(indexPath.row == 0){
@@ -49,6 +57,7 @@ class CalendarViewController: UITableViewController {
         }    
        
     }
+    
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if(indexPath.row == 0){
             return 132
@@ -56,6 +65,7 @@ class CalendarViewController: UITableViewController {
             return 44
         }
     }
+    
     // MARK : segue
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "DaySegue"){
