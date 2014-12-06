@@ -15,17 +15,24 @@ class MusicBarNavigationController: UINavigationController,MusicPlayerBarDelegat
         var  bar = MusicPlayerBar.loadFromNibNamed("MusicPlayerBar", bundle: nil)
         bar.delegate = self
         let screenSize: CGRect = UIScreen.mainScreen().bounds
-        bar.frame = CGRectMake(0, screenSize.height - 50, screenSize.width, 50)
+        bar.frame = CGRectMake(0, screenSize.height - 45, screenSize.width, 45)
         self.view.addSubview(bar)
         bar.hidden = true
-        
+
         return bar
     }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupBar()
+       
+    }
+    func setupBar(){
 
        
+        navigationBar.setBackgroundImage(UIImage(named: "bg_white.jpg"), forBarPosition: UIBarPosition.Any, barMetrics: UIBarMetrics.Default)
+        navigationBar.shadowImage = UIImage(named: "bg_djbot_red.jpg")
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,6 +43,7 @@ class MusicBarNavigationController: UINavigationController,MusicPlayerBarDelegat
     // MARK : music player
     func showMusicPlayerBar(){
         musicPlayerBar.hidden = false;
+        
     }
     
     func hideMusicPlayerBar(){

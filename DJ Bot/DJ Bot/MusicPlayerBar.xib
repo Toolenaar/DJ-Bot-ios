@@ -1,26 +1,114 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MusicPlayerBar" customModule="DJ_Bot" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="MusicPlayerBar" customModule="DJ_Bot" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="0.57647058819999997" green="0.51372549020000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WJ4-2L-jme">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                    <color key="backgroundColor" red="0.81568627449999997" green="0.0078431372550000003" blue="0.1058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="wrd-N5-wez"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A8c-OS-VCe">
+                    <rect key="frame" x="276" y="6" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="8k2-h4-RKQ"/>
+                        <constraint firstAttribute="height" constant="44" id="ziv-rv-7pf"/>
+                    </constraints>
+                    <state key="normal" image="icn_pause.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <state key="selected" image="icn_play.png"/>
+                    <connections>
+                        <action selector="togglePlayPause:" destination="iN0-l3-epB" eventType="touchUpInside" id="3i4-vL-i1Z"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_navbar.png" translatesAutoresizingMaskIntoConstraints="NO" id="Bex-1S-Iic">
+                    <rect key="frame" x="0.0" y="6" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="Dms-cz-ehf"/>
+                        <constraint firstAttribute="height" constant="44" id="FW2-29-UNh"/>
+                    </constraints>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MVn-Hb-5bN">
+                    <rect key="frame" x="52" y="9" width="216" height="33"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Track title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ga7-WG-ae4">
+                            <rect key="frame" x="0.0" y="0.0" width="216" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qWS-Ce-Uvz">
+                            <rect key="frame" x="0.0" y="18" width="216" height="15"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="qWS-Ce-Uvz" firstAttribute="leading" secondItem="MVn-Hb-5bN" secondAttribute="leading" id="7KD-cf-4S2"/>
+                        <constraint firstAttribute="trailing" secondItem="qWS-Ce-Uvz" secondAttribute="trailing" id="Oh1-Eu-CTz"/>
+                        <constraint firstItem="Ga7-WG-ae4" firstAttribute="leading" secondItem="MVn-Hb-5bN" secondAttribute="leading" id="Vky-pa-wbq"/>
+                        <constraint firstItem="qWS-Ce-Uvz" firstAttribute="top" secondItem="Ga7-WG-ae4" secondAttribute="bottom" id="XHN-Q1-AB8"/>
+                        <constraint firstAttribute="height" constant="33" id="erY-SG-YZJ"/>
+                        <constraint firstAttribute="trailing" secondItem="Ga7-WG-ae4" secondAttribute="trailing" id="hB9-48-iqt"/>
+                        <constraint firstItem="Ga7-WG-ae4" firstAttribute="top" secondItem="MVn-Hb-5bN" secondAttribute="top" id="pD2-2p-nfn"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hsh-SG-qzr">
+                    <rect key="frame" x="0.0" y="0.0" width="276" height="50"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="ZF7-FX-Yi6" appends="YES" id="Rf7-cH-EI4"/>
+                    </connections>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="hsh-SG-qzr" secondAttribute="bottom" id="2LH-Md-PKy"/>
+                <constraint firstItem="hsh-SG-qzr" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="30V-Qf-gz7"/>
+                <constraint firstAttribute="bottom" secondItem="A8c-OS-VCe" secondAttribute="bottom" id="Bjn-aL-m8j"/>
+                <constraint firstAttribute="trailing" secondItem="WJ4-2L-jme" secondAttribute="trailing" id="BsE-g0-Vdw"/>
+                <constraint firstAttribute="bottom" secondItem="Bex-1S-Iic" secondAttribute="bottom" id="GyR-3i-N0o"/>
+                <constraint firstItem="hsh-SG-qzr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="M5i-ii-V45"/>
+                <constraint firstAttribute="trailing" secondItem="A8c-OS-VCe" secondAttribute="trailing" id="Ny2-g3-xsi"/>
+                <constraint firstAttribute="centerY" secondItem="MVn-Hb-5bN" secondAttribute="centerY" id="Y8N-ck-zWl"/>
+                <constraint firstItem="Bex-1S-Iic" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="YGX-dO-XsK"/>
+                <constraint firstItem="WJ4-2L-jme" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="jRq-qV-Py3"/>
+                <constraint firstItem="A8c-OS-VCe" firstAttribute="leading" secondItem="MVn-Hb-5bN" secondAttribute="trailing" constant="8" id="jnx-uW-uws"/>
+                <constraint firstItem="A8c-OS-VCe" firstAttribute="leading" secondItem="hsh-SG-qzr" secondAttribute="trailing" id="lE7-RC-GLd"/>
+                <constraint firstItem="MVn-Hb-5bN" firstAttribute="leading" secondItem="Bex-1S-Iic" secondAttribute="trailing" constant="8" id="unq-ao-4gK"/>
+                <constraint firstItem="WJ4-2L-jme" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yPS-hc-LG5"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outletCollection property="gestureRecognizers" destination="6OK-af-Z96" appends="YES" id="gRs-nB-wC6"/>
+                <outlet property="artworkImageView" destination="Bex-1S-Iic" id="LrI-Zw-rXj"/>
+                <outlet property="playPauseButton" destination="A8c-OS-VCe" id="SNz-XG-e8Q"/>
             </connections>
-            <point key="canvasLocation" x="556" y="496"/>
+            <point key="canvasLocation" x="456" y="625"/>
         </view>
-        <tapGestureRecognizer id="6OK-af-Z96">
+        <tapGestureRecognizer id="ZF7-FX-Yi6">
             <connections>
-                <action selector="startPlayer:" destination="iN0-l3-epB" id="u0Z-rs-c9n"/>
+                <action selector="startPlayer:" destination="iN0-l3-epB" id="rRO-uN-Y4Y"/>
             </connections>
         </tapGestureRecognizer>
     </objects>
+    <resources>
+        <image name="icn_navbar.png" width="44" height="44"/>
+        <image name="icn_pause.png" width="44" height="44"/>
+        <image name="icn_play.png" width="44" height="44"/>
+    </resources>
 </document>

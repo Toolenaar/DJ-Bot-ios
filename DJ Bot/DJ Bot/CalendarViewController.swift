@@ -67,7 +67,7 @@ class CalendarViewController: UITableViewController {
         if(indexPath.row == 0){
             return 178
         }else{
-            return 60
+            return 64
         }
     }
     

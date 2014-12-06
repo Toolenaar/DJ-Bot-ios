@@ -99,17 +99,17 @@
                                     <segue destination="Oqt-J4-mvV" kind="show" identifier="DaySegue" id="0HT-d7-BfG"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DayCell" rowHeight="60" id="tDX-NC-hhP" customClass="DayCell" customModule="DJ_Bot" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DayCell" rowHeight="64" id="tDX-NC-hhP" customClass="DayCell" customModule="DJ_Bot" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tDX-NC-hhP" id="G4M-Ik-Go1">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XUi-lJ-Nhe">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
                                         </imageView>
                                         <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZpS-mm-Rui">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="63"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BLq-qt-2j4">
@@ -248,7 +248,7 @@
                                     <outlet property="featuredImageView" destination="DK1-H2-HF2" id="gXL-gm-rit"/>
                                     <outlet property="overlayView" destination="RFc-q6-hxA" id="qdd-Xr-42C"/>
                                     <outlet property="titleLabel" destination="QpX-Qp-zfG" id="sm9-RY-re6"/>
-                                    <segue destination="CYi-ME-fPT" kind="show" id="kwe-kW-I0S"/>
+                                    <segue destination="CYi-ME-fPT" kind="show" identifier="GenreSegue" id="kwe-kW-I0S"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -305,7 +305,7 @@
         <scene sceneID="Cyy-IV-DLk">
             <objects>
                 <navigationController id="PeK-oV-TSR" customClass="MusicBarNavigationController" customModule="DJ_Bot" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="pej-yG-kwb">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" shadowImage="bg_djbot_red.jpg" backIndicatorImage="   " id="pej-yG-kwb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -325,6 +325,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="   " width="16" height="16"/>
+        <image name="bg_djbot_red.jpg" width="1" height="1"/>
         <image name="icn_navbar.png" width="44" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
