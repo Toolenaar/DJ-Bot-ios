@@ -1,0 +1,13 @@
+# Uncomment this line to define a global platform for your project
+platform :ios, '8.1'
+
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'DJ Bot' do
+pod 'SDWebImage', '~>3.7.1'
+end
+
+target 'DJ BotTests' do
+
+end
+

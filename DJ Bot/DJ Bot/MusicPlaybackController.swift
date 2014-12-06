@@ -30,7 +30,11 @@ class MusicPlaybackController {
         }
         
     }
-    var isPlaying:Bool = false
+    var isPlaying:Bool {
+        get{
+            return player?.rate != 0
+        }
+    }
     var isInitialized:Bool = false
     var playlist:[BotTrack]?{
         didSet{

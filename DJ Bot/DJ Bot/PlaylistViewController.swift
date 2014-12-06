@@ -23,12 +23,12 @@ class PlaylistViewController: UITableViewController {
         "https://api.soundcloud.com/tracks/108481211/stream?client_id=5be8a5639583c700d021ac61bd06437d"
         
     ]
-    
     override func viewDidLoad() {
         for i in 0...testTracks.count-1{
             var track = BotTrack(title: "Track\(i)", streamUri: testTracks[i], id: "\(i)", artistName: "Artist\(i)", releaseDate: NSDate(), duration: 20)
             tracks += [track]
-        }   
+        }
+        
     }
     
     //mark - tableview
@@ -40,6 +40,8 @@ class PlaylistViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         MusicPlaybackController.sharedInstance.playlist = tracks
+      
+        (self.navigationController as MusicBarNavigationController).showMusicPlayerBar()
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

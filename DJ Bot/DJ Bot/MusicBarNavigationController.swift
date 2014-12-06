@@ -8,11 +8,12 @@
 
 import UIKit
 
-class MusicBarNavigationController: UINavigationController {
+class MusicBarNavigationController: UINavigationController,MusicPlayerBarDelegate {
  
     lazy var musicPlayerBar:MusicPlayerBar = {
         
         var  bar = MusicPlayerBar.loadFromNibNamed("MusicPlayerBar", bundle: nil)
+        bar.delegate = self
         let screenSize: CGRect = UIScreen.mainScreen().bounds
         bar.frame = CGRectMake(0, screenSize.height - 50, screenSize.width, 50)
         self.view.addSubview(bar)
@@ -39,6 +40,11 @@ class MusicBarNavigationController: UINavigationController {
     
     func hideMusicPlayerBar(){
         musicPlayerBar.hidden = true;
+    }
+    
+    func onMusicPlayerBarTapped(bar: MusicPlayerBar) {
+        var controller = MusicPlayerViewController(nibName:"MusicPlayerViewController" ,bundle:nil)
+        presentViewController(controller, animated: true, completion: nil)
     }
 
     /*

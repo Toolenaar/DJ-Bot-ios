@@ -10,7 +10,6 @@
 		125BA86F1A2B46500009E089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125BA86E1A2B46500009E089 /* AppDelegate.swift */; };
 		125BA8721A2B46500009E089 /* DJ_Bot.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 125BA8701A2B46500009E089 /* DJ_Bot.xcdatamodeld */; };
 		125BA8771A2B46500009E089 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 125BA8751A2B46500009E089 /* Main.storyboard */; };
-		125BA8791A2B46500009E089 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 125BA8781A2B46500009E089 /* Images.xcassets */; };
 		125BA87C1A2B46500009E089 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 125BA87A1A2B46500009E089 /* LaunchScreen.xib */; };
 		125BA8881A2B46500009E089 /* DJ_BotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125BA8871A2B46500009E089 /* DJ_BotTests.swift */; };
 		125BA8951A2B472F0009E089 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125BA8941A2B472F0009E089 /* CalendarViewController.swift */; };
@@ -21,6 +20,8 @@
 		125BA8A31A2B51620009E089 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125BA8A21A2B51620009E089 /* StringExtension.swift */; };
 		125BA8A51A2B54CC0009E089 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125BA8A41A2B54CC0009E089 /* DateExtension.swift */; };
 		125BA8A81A2BAB920009E089 /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125BA8A71A2BAB920009E089 /* PlaylistViewController.swift */; };
+		125F294C1A2FC57B00572ACE /* icn_app@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F294A1A2FC57B00572ACE /* icn_app@2x.png */; };
+		125F294D1A2FC57B00572ACE /* icn_app@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 125F294B1A2FC57B00572ACE /* icn_app@3x.png */; };
 		127C56271A2C4F7600537018 /* TodayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C56261A2C4F7600537018 /* TodayCell.swift */; };
 		127C56291A2C4FBE00537018 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C56281A2C4FBE00537018 /* DayCell.swift */; };
 		127C562C1A2C528100537018 /* GenreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127C562B1A2C528100537018 /* GenreCell.swift */; };
@@ -31,8 +32,10 @@
 		12CA2A431A2E4B66006EEAC4 /* MusicPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12CA2A411A2E4B66006EEAC4 /* MusicPlayerViewController.xib */; };
 		12CA2A471A2E561D006EEAC4 /* MusicPlaybackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CA2A461A2E561D006EEAC4 /* MusicPlaybackController.swift */; };
 		12CA2A491A2E5663006EEAC4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12CA2A481A2E5663006EEAC4 /* AVFoundation.framework */; };
+		12CCC9E61A2FBCFA00A2FCF8 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12CCC9E51A2FBCFA00A2FCF8 /* Images-2.xcassets */; };
 		12CEB1451A2E689300A4AED0 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CEB1441A2E689300A4AED0 /* ArrayExtension.swift */; };
 		12CEB1471A2E71C900A4AED0 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12CEB1461A2E71C900A4AED0 /* MediaPlayer.framework */; };
+		57457664BE3437555D6FAFA4 /* libPods-DJ Bot.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E846654925941D80AD9E4186 /* libPods-DJ Bot.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +67,6 @@
 		125BA86E1A2B46500009E089 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		125BA8711A2B46500009E089 /* DJ_Bot.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DJ_Bot.xcdatamodel; sourceTree = "<group>"; };
 		125BA8761A2B46500009E089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		125BA8781A2B46500009E089 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		125BA87B1A2B46500009E089 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		125BA8811A2B46500009E089 /* DJ BotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DJ BotTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		125BA8861A2B46500009E089 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -77,6 +79,9 @@
 		125BA8A21A2B51620009E089 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		125BA8A41A2B54CC0009E089 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		125BA8A71A2BAB920009E089 /* PlaylistViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
+		125F294A1A2FC57B00572ACE /* icn_app@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icn_app@2x.png"; sourceTree = "<group>"; };
+		125F294B1A2FC57B00572ACE /* icn_app@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icn_app@3x.png"; sourceTree = "<group>"; };
+		12669D681A32FD66004313D1 /* DJ Bot-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DJ Bot-Bridging-Header.h"; sourceTree = "<group>"; };
 		127C56261A2C4F7600537018 /* TodayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodayCell.swift; sourceTree = "<group>"; };
 		127C56281A2C4FBE00537018 /* DayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
 		127C562B1A2C528100537018 /* GenreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenreCell.swift; sourceTree = "<group>"; };
@@ -87,8 +92,12 @@
 		12CA2A411A2E4B66006EEAC4 /* MusicPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicPlayerViewController.xib; sourceTree = "<group>"; };
 		12CA2A461A2E561D006EEAC4 /* MusicPlaybackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlaybackController.swift; sourceTree = "<group>"; };
 		12CA2A481A2E5663006EEAC4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		12CCC9E51A2FBCFA00A2FCF8 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		12CEB1441A2E689300A4AED0 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		12CEB1461A2E71C900A4AED0 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		191BAA5C90D48DF41456BBDB /* Pods-DJ Bot.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DJ Bot.release.xcconfig"; path = "Pods/Target Support Files/Pods-DJ Bot/Pods-DJ Bot.release.xcconfig"; sourceTree = "<group>"; };
+		E6526BE59B120A940FAA32EA /* Pods-DJ Bot.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DJ Bot.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DJ Bot/Pods-DJ Bot.debug.xcconfig"; sourceTree = "<group>"; };
+		E846654925941D80AD9E4186 /* libPods-DJ Bot.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DJ Bot.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +107,7 @@
 			files = (
 				12CEB1471A2E71C900A4AED0 /* MediaPlayer.framework in Frameworks */,
 				12CA2A491A2E5663006EEAC4 /* AVFoundation.framework in Frameworks */,
+				57457664BE3437555D6FAFA4 /* libPods-DJ Bot.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +121,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1206C4B41A32F475008FA9A3 /* Test */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Test;
+			sourceTree = "<group>";
+		};
 		125BA8601A2B46500009E089 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +136,8 @@
 				125BA86B1A2B46500009E089 /* DJ Bot */,
 				125BA8841A2B46500009E089 /* DJ BotTests */,
 				125BA86A1A2B46500009E089 /* Products */,
+				304E81736DEB890E86CAABB2 /* Pods */,
+				1485BFE2357A1915E77195CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,11 +153,13 @@
 		125BA86B1A2B46500009E089 /* DJ Bot */ = {
 			isa = PBXGroup;
 			children = (
+				12CCC9E41A2FBB5C00A2FCF8 /* Assets */,
 				125BA8A01A2B505B0009E089 /* Utils */,
 				125BA8991A2B4B930009E089 /* Setup */,
 				125BA8921A2B46DA0009E089 /* Model */,
 				125BA8911A2B46D30009E089 /* View */,
 				125BA8751A2B46500009E089 /* Main.storyboard */,
+				12CCC9E51A2FBCFA00A2FCF8 /* Images-2.xcassets */,
 				125BA86C1A2B46500009E089 /* Supporting Files */,
 			);
 			path = "DJ Bot";
@@ -213,8 +234,8 @@
 			isa = PBXGroup;
 			children = (
 				125BA86E1A2B46500009E089 /* AppDelegate.swift */,
-				125BA8781A2B46500009E089 /* Images.xcassets */,
 				125BA87A1A2B46500009E089 /* LaunchScreen.xib */,
+				12669D681A32FD66004313D1 /* DJ Bot-Bridging-Header.h */,
 			);
 			name = Setup;
 			sourceTree = "<group>";
@@ -291,6 +312,33 @@
 			name = MusicPlayer;
 			sourceTree = "<group>";
 		};
+		12CCC9E41A2FBB5C00A2FCF8 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				1206C4B41A32F475008FA9A3 /* Test */,
+				125F294A1A2FC57B00572ACE /* icn_app@2x.png */,
+				125F294B1A2FC57B00572ACE /* icn_app@3x.png */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		1485BFE2357A1915E77195CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E846654925941D80AD9E4186 /* libPods-DJ Bot.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		304E81736DEB890E86CAABB2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6526BE59B120A940FAA32EA /* Pods-DJ Bot.debug.xcconfig */,
+				191BAA5C90D48DF41456BBDB /* Pods-DJ Bot.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -298,10 +346,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 125BA88B1A2B46500009E089 /* Build configuration list for PBXNativeTarget "DJ Bot" */;
 			buildPhases = (
+				A5721FD176C212A46D1AFB91 /* Check Pods Manifest.lock */,
 				125BA8651A2B46500009E089 /* Sources */,
 				125BA8661A2B46500009E089 /* Frameworks */,
 				125BA8671A2B46500009E089 /* Resources */,
 				125BA8CA1A2BB2530009E089 /* Embed Frameworks */,
+				FBC80624FA0379D3F6FAC0D4 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -372,11 +422,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12CCC9E61A2FBCFA00A2FCF8 /* Images-2.xcassets in Resources */,
+				125F294C1A2FC57B00572ACE /* icn_app@2x.png in Resources */,
 				12CA2A431A2E4B66006EEAC4 /* MusicPlayerViewController.xib in Resources */,
+				125F294D1A2FC57B00572ACE /* icn_app@3x.png in Resources */,
 				125BA8771A2B46500009E089 /* Main.storyboard in Resources */,
 				125BA87C1A2B46500009E089 /* LaunchScreen.xib in Resources */,
 				12C274F91A2D049F003A6D7B /* MusicPlayerBar.xib in Resources */,
-				125BA8791A2B46500009E089 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +440,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A5721FD176C212A46D1AFB91 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FBC80624FA0379D3F6FAC0D4 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DJ Bot/Pods-DJ Bot-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		125BA8651A2B46500009E089 /* Sources */ = {
@@ -532,21 +617,28 @@
 		};
 		125BA88C1A2B46500009E089 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6526BE59B120A940FAA32EA /* Pods-DJ Bot.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "DJ Bot/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DJ Bot/DJ Bot-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		125BA88D1A2B46500009E089 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 191BAA5C90D48DF41456BBDB /* Pods-DJ Bot.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "DJ Bot/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "DJ Bot/DJ Bot-Bridging-Header.h";
 			};
 			name = Release;
 		};

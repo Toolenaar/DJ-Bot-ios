@@ -27,8 +27,7 @@ class CalendarViewController: UITableViewController {
     // MARK : view
     override func viewWillAppear(animated: Bool) {
         //test to show the view TODO: let it react to music playback and only show when playing music
-        let navController = self.navigationController as MusicBarNavigationController
-        navController.showMusicPlayerBar()
+       
     }
     
     
@@ -47,12 +46,13 @@ class CalendarViewController: UITableViewController {
         if(indexPath.row == 0){
             var cell = tableView.dequeueReusableCellWithIdentifier("TodayCell") as TodayCell
             var day = days![indexPath.row]
-            cell.titleLabel.text = day.displayName
+            cell.setupCell(day)
             return cell
         }else{
             var cell = tableView.dequeueReusableCellWithIdentifier("DayCell") as DayCell
             var day = days![indexPath.row]
-            cell.titleLabel.text = day.displayName
+            cell.setupCell(day)
+            
             return cell
         }    
        
@@ -60,9 +60,9 @@ class CalendarViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if(indexPath.row == 0){
-            return 132
+            return 178
         }else{
-            return 44
+            return 60
         }
     }
     

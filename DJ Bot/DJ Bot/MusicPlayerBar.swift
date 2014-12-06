@@ -8,7 +8,11 @@
 
 import UIKit
 
+protocol MusicPlayerBarDelegate{
+    func onMusicPlayerBarTapped(bar:MusicPlayerBar)
+}
 class MusicPlayerBar: UIView {
+    var delegate:MusicPlayerBarDelegate?
     
      class func loadFromNibNamed(nibNamed: String, bundle : NSBundle? = nil) -> MusicPlayerBar {
         return UINib(
@@ -19,6 +23,7 @@ class MusicPlayerBar: UIView {
     
     @IBAction func startPlayer(sender: AnyObject) {
         println("starting player")
+        delegate?.onMusicPlayerBarTapped(self)
     }
     
 }
