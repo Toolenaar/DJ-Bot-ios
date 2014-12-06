@@ -22,12 +22,17 @@ class CalendarViewController: UITableViewController {
         var botDay2 = BotDay(title: "SomeDay", date: "29-11-2014".toDate(format: "dd-MM-yyyy")!)
         var botDay3 = BotDay(title: "SomeDay", date: "28-11-2014".toDate(format: "dd-MM-yyyy")!)
         days = [botDay1,botDay2,botDay3]
-        
+            setIconOnNavBar()
+    }
+    func setIconOnNavBar(){
+
+        self.navigationItem.titleView?.clipsToBounds = true;
     }
     // MARK : view
     override func viewWillAppear(animated: Bool) {
         //test to show the view TODO: let it react to music playback and only show when playing music
-       
+      
+      
     }
     
     
@@ -70,7 +75,7 @@ class CalendarViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "DaySegue"){
             //get view controller and set the selected day
-            let genreController = segue.destinationViewController as GenresViewController
+            let genreController = segue.destinationViewController as GenreCollectionViewController
             let path = self.tableView.indexPathForSelectedRow()!
             genreController.selectedDay = days![path.row]
             

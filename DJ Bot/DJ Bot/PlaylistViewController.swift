@@ -47,7 +47,7 @@ class PlaylistViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("TrackCell") as UITableViewCell
         var track = tracks[indexPath.row]
-        cell.textLabel.text = track.title
+        cell.textLabel?.text = track.title
         return cell;
     }
     
