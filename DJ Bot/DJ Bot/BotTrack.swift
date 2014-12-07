@@ -18,13 +18,16 @@ class BotTrack : Equatable {
     let artistName:String
     let releaseDate:NSDate
     let duration:Int = 0
+    let artworkUri:String
+    var isLoved:Bool = false
     
-    init(title:String, streamUri:String,id:String,artistName:String,releaseDate:NSDate,duration:Int){
+    init(title:String, streamUri:String,id:String,artistName:String,releaseDate:NSDate,duration:Int,artworkUri:String){
         self.title = title;
         self.streamUri = streamUri
         self.id = id
         self.artistName = artistName
         self.releaseDate = releaseDate
         self.duration = duration
+        self.artworkUri = artworkUri
     }
 }
