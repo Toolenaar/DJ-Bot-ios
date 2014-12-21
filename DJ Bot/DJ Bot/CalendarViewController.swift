@@ -23,7 +23,21 @@ class CalendarViewController: UITableViewController {
         var botDay3 = BotDay(title: "SomeDay", date: "28-11-2014".toDate(format: "dd-MM-yyyy")!)
         days = [botDay1,botDay2,botDay3]
             setIconOnNavBar()
+        loadDays()
     }
+    
+    func loadDays(){
+        let client = MobileServiceClient();
+        client.getDays(NSDate(), count: 2) { (days) -> Void in
+            var size = days.count;
+            
+            
+        }
+    }
+    
+   
+    
+    
     func setIconOnNavBar(){
 
         self.navigationItem.titleView?.clipsToBounds = true;
