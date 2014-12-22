@@ -33,7 +33,7 @@ class MusicPlayerViewController: UIViewController {
     }
     func updateView(){
         if let track = player.activeTrack{
-            let url = NSURL(string: track.artworkUri)
+            let url = NSURL(string: track.artworkUri!)
             blurredBackImage.sd_setImageWithURL(url)
             artworkImageView.sd_setImageWithURL(url)
             

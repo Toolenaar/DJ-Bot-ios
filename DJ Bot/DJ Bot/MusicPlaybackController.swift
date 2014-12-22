@@ -171,10 +171,9 @@ class MusicPlaybackController {
         
         
         return [
-            MPMediaItemPropertyTitle:track.title,
-            MPMediaItemPropertyArtist:track.artistName,
+            MPMediaItemPropertyTitle:track.title!,
+            MPMediaItemPropertyArtist:track.artistName!,
             MPMediaItemPropertyPlaybackDuration:track.duration,
-            MPMediaItemPropertyReleaseDate:track.releaseDate,
             MPNowPlayingInfoPropertyPlaybackRate:NSNumber(),
             MPNowPlayingInfoPropertyElapsedPlaybackTime:currentTime
         ]

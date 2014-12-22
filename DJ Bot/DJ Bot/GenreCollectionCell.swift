@@ -17,9 +17,9 @@ class GenreCollectionCell: UICollectionViewCell {
     override func awakeFromNib() {
         featuredImageView.clipsToBounds = true
     }
-    func setupCell(genre:String,imgUri:String){
-        titleLabel.text = genre.uppercaseString
-        var url = NSURL(string: imgUri)
+    func setupCell(genre:BotGenre){
+        titleLabel.text = genre.genre.uppercaseString
+        var url = NSURL(string: genre.thumbnailImageUrl)
         featuredImageView.sd_setImageWithURL(url)
 
     }

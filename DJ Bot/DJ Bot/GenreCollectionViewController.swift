@@ -10,11 +10,12 @@ import UIKit
 
 class GenreCollectionViewController: UICollectionViewController,UICollectionViewDelegateFlowLayout {
 
-     private let sectionInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    let genres :[String] = ["Techno","Deep House","Minimal","Drum & Bass","House","Hardcore","Tech House","Trance"]
+    private let sectionInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    var genres :[BotGenre]?
     var selectedDay :BotDay?{
         didSet {
             self.title = selectedDay?.displayName
+            self.genres = selectedDay?.featuredGenres
         }
     }
     
@@ -23,13 +24,16 @@ class GenreCollectionViewController: UICollectionViewController,UICollectionView
         return 1;
     }
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return genres.count
+        if let theGenres = genres{
+            return theGenres.count
+        }
+        return 0
     }
     
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("GenreCollectionCell", forIndexPath: indexPath) as GenreCollectionCell
-        let title = genres[indexPath.row]
-        cell.setupCell(title, imgUri: "https://va.sndcdn.com/bg/soundcloud:sounds:179939605/SIRENE-VS.jpg")
+        let genre = genres![indexPath.row]
+        cell.setupCell(genre)
         return cell
     }
 
@@ -38,7 +42,8 @@ class GenreCollectionViewController: UICollectionViewController,UICollectionView
             //get view controller and set the selected day
             let playlistController = segue.destinationViewController as PlaylistViewController
             let path = self.collectionView?.indexPathsForSelectedItems()[0] as NSIndexPath
-            playlistController.genre = genres[path.row]
+            playlistController.genre = genres![path.row]
+            playlistController.date = selectedDay?.date
             
         }
     }

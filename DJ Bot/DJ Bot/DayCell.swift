@@ -30,8 +30,8 @@ class DayCell: UITableViewCell {
     func setupCell(day:BotDay){
         //
         dayLabel.text = day.displayName
-        
-        var url = NSURL(string: "https://va.sndcdn.com/bg/soundcloud:sounds:179939605/SIRENE-VS.jpg")
+         let track = day.featuredTracks[0]
+        var url = NSURL(string: track.artworkUri!)
         featuredImageView.sd_setImageWithURL(url)
         
     }

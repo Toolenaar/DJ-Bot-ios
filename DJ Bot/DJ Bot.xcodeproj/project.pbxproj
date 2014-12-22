@@ -36,6 +36,7 @@
 		12CA2A431A2E4B66006EEAC4 /* MusicPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12CA2A411A2E4B66006EEAC4 /* MusicPlayerViewController.xib */; };
 		12CA2A471A2E561D006EEAC4 /* MusicPlaybackController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CA2A461A2E561D006EEAC4 /* MusicPlaybackController.swift */; };
 		12CA2A491A2E5663006EEAC4 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12CA2A481A2E5663006EEAC4 /* AVFoundation.framework */; };
+		12CB5B891A48203C00483979 /* BotGenre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CB5B881A48203C00483979 /* BotGenre.swift */; };
 		12CCC9E61A2FBCFA00A2FCF8 /* Images-2.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12CCC9E51A2FBCFA00A2FCF8 /* Images-2.xcassets */; };
 		12CEB1451A2E689300A4AED0 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CEB1441A2E689300A4AED0 /* ArrayExtension.swift */; };
 		12CEB1471A2E71C900A4AED0 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12CEB1461A2E71C900A4AED0 /* MediaPlayer.framework */; };
@@ -137,6 +138,7 @@
 		12CA2A411A2E4B66006EEAC4 /* MusicPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicPlayerViewController.xib; sourceTree = "<group>"; };
 		12CA2A461A2E561D006EEAC4 /* MusicPlaybackController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicPlaybackController.swift; sourceTree = "<group>"; };
 		12CA2A481A2E5663006EEAC4 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		12CB5B881A48203C00483979 /* BotGenre.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BotGenre.swift; sourceTree = "<group>"; };
 		12CCC9E51A2FBCFA00A2FCF8 /* Images-2.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Images-2.xcassets"; sourceTree = "<group>"; };
 		12CEB1441A2E689300A4AED0 /* ArrayExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		12CEB1461A2E71C900A4AED0 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -289,6 +291,7 @@
 				125BA89A1A2B4D470009E089 /* BotDay.swift */,
 				125BA89C1A2B4D500009E089 /* BotPlaylist.swift */,
 				125BA89E1A2B4D5C0009E089 /* BotTrack.swift */,
+				12CB5B881A48203C00483979 /* BotGenre.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -693,6 +696,7 @@
 				12E3ACA81A334BD9008272D0 /* UIImageExtension.swift in Sources */,
 				125BA8A31A2B51620009E089 /* StringExtension.swift in Sources */,
 				12E3ACA61A33406C008272D0 /* UIColorExtension.swift in Sources */,
+				12CB5B891A48203C00483979 /* BotGenre.swift in Sources */,
 				12CEB1451A2E689300A4AED0 /* ArrayExtension.swift in Sources */,
 				12C274FB1A2D06AE003A6D7B /* MusicBarNavigationController.swift in Sources */,
 				12E3ACA21A33317A008272D0 /* GenreCollectionViewController.swift in Sources */,

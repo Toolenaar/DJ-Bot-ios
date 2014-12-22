@@ -17,31 +17,27 @@ class CalendarViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //test days
-        var botDay1 = BotDay(title: "SomeDay", date: "30-11-2014".toDate(format: "dd-MM-yyyy")!)
-        var botDay2 = BotDay(title: "SomeDay", date: "29-11-2014".toDate(format: "dd-MM-yyyy")!)
-        var botDay3 = BotDay(title: "SomeDay", date: "28-11-2014".toDate(format: "dd-MM-yyyy")!)
-        days = [botDay1,botDay2,botDay3]
-            setIconOnNavBar()
+       
+        setIconOnNavBar()
         loadDays()
     }
     
     func loadDays(){
         let client = MobileServiceClient();
         client.getDays(NSDate(), count: 2) { (days) -> Void in
-            var size = days.count;
             
+            self.days = days;
+            self.tableView.reloadData()
             
         }
     }
-    
-   
     
     
     func setIconOnNavBar(){
 
         self.navigationItem.titleView?.clipsToBounds = true;
     }
+    
     // MARK : view
     override func viewWillAppear(animated: Bool) {
         //test to show the view TODO: let it react to music playback and only show when playing music

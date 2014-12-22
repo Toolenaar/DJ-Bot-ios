@@ -9,12 +9,13 @@
 import UIKit
 
 class PlaylistViewController: UITableViewController,PlaylistTrackCellDelegate {
-    var genre:String?{
+    var genre:BotGenre?{
         didSet {
-            self.title = genre
+            self.title = genre?.genre
         }
     }
-    var tracks:[BotTrack] = []
+    var date:NSDate?
+    var tracks:[BotTrack]? = []
     let testTracks:[String] = [
         "https://api.soundcloud.com/tracks/130358643/stream?client_id=5be8a5639583c700d021ac61bd06437d",
         "https://api.soundcloud.com/tracks/156538707/stream?client_id=5be8a5639583c700d021ac61bd06437d",
@@ -28,18 +29,34 @@ class PlaylistViewController: UITableViewController,PlaylistTrackCellDelegate {
         "https://api.soundcloud.com/tracks/108481211/stream?client_id=5be8a5639583c700d021ac61bd06437d"
         
     ]
+    
     override func viewDidLoad() {
-        for i in 0...testTracks.count-1{
-            var track = BotTrack(title: "Track\(i)", streamUri: testTracks[i], id: "\(i)", artistName: "Artist\(i)", releaseDate: NSDate(), duration: 20,artworkUri:"https://i1.sndcdn.com/artworks-000099073750-4w1lhm-t300x300.jpg")
+        /*for i in 0...testTracks.count-1{
+            var track = BotTrack(title: "Track\(i)", streamUri: testTracks[i], id: "\(i)", artistName: "Artist\(i)", releaseDate: NSDate(), duration: 20,artworkUri:"https://i1.sndcdn.com/artworks-000099073750-4w1lhm-t300x300.jpg",)
             tracks += [track]
-        }
+        }*/
         
+    }
+    override func viewWillAppear(animated: Bool) {
+        loadPlaylist()
+    }
+    
+    func loadPlaylist(){
+        let client = MobileServiceClient();
+        client.getPlaylist(date!, genre: genre!) { (playlist) -> Void in
+            self.tracks = playlist?.tracks
+            self.tableView.reloadData()
+            
+        }
     }
     
     //mark - tableview
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-       return tracks.count
+        if let theTracks = tracks{
+            return theTracks.count
+        }
+        
+       return 0
 
     }
     
@@ -51,7 +68,7 @@ class PlaylistViewController: UITableViewController,PlaylistTrackCellDelegate {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("TrackCell") as PlaylistTrackCell
-        var track = tracks[indexPath.row]
+        var track = tracks![indexPath.row]
         cell.setupView(track)
         cell.delegate = self
         return cell;

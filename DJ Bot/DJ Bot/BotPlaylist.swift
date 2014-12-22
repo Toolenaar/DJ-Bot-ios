@@ -8,11 +8,15 @@
 
 import Foundation
 class BotPlaylist {
-    let title:String
     let genre:String
+    let id:String
+    let date:NSDate
+    let tracks:[BotTrack]
     
-    init(title:String,genre:String){
-        self.title = title;
-        self.genre = genre;
+    init(genre:String,id:String,date:NSDate,tracks:[BotTrack]){
+        self.genre = genre
+        self.id = id
+        self.tracks = tracks
+        self.date = date
     }
 }

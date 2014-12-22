@@ -39,9 +39,15 @@ class TodayCell: UITableViewCell {
     }
     
     func setupCell(day:BotDay){
-        var url = NSURL(string: "https://i1.sndcdn.com/artworks-000096928229-4rjzyx-t500x500.jpg")
+        
+        let track = day.featuredTracks[0]
+        
+        var url = NSURL(string: track.artworkUri!)
         featuredImageView.sd_setImageWithURL(url)
-         titleLabel.text = day.displayName
+        titleLabel.text = day.displayName
+        trackTitleLabel.text = track.title
+        artistNameLabel.text = track.artistName
+        genreLabel.text = track.genre
         
         genreView.sizeToFit()
     }

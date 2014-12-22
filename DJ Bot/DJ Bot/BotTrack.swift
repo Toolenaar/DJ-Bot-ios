@@ -12,16 +12,18 @@ func ==(lhs: BotTrack, rhs: BotTrack) -> Bool {
     return lhs.id == rhs.id
 }
 class BotTrack : Equatable {
-    let title:String
-    let streamUri:String
-    let id:String
-    let artistName:String
-    let releaseDate:NSDate
+   
+    let title:String?
+    let streamUri:String?
+    let id:String?
+    let artistName:String?
+    let releaseDate:NSDate?
     let duration:Int = 0
-    let artworkUri:String
+    let artworkUri:String?
+    var genre:String?
     var isLoved:Bool = false
     
-    init(title:String, streamUri:String,id:String,artistName:String,releaseDate:NSDate,duration:Int,artworkUri:String){
+    init(title:String?, streamUri:String?,id:String?,artistName:String?,releaseDate:NSDate?,duration:Int,artworkUri:String?,genre:String?){
         self.title = title;
         self.streamUri = streamUri
         self.id = id
@@ -29,5 +31,6 @@ class BotTrack : Equatable {
         self.releaseDate = releaseDate
         self.duration = duration
         self.artworkUri = artworkUri
+        self.genre = genre
     }
 }

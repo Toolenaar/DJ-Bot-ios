@@ -42,7 +42,7 @@ class PlaylistTrackCell: UITableViewCell {
     
     func setupView(track:BotTrack){
         self.track = track
-        let uri = NSURL(string: track.artworkUri)
+        let uri = NSURL(string: track.artworkUri!)
         artworkImageView.sd_setImageWithURL(uri)
         
         artistNameLabel.text = track.artistName
