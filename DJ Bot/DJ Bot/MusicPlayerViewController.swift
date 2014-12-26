@@ -17,7 +17,6 @@ class MusicPlayerViewController: UIViewController {
     @IBOutlet weak var playedLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
     @IBOutlet weak var timeSlider: UISlider!
-    @IBOutlet weak var blurredBackImage: UIImageView!
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var previousButton: UIButton!
     @IBOutlet weak var playPauseButton: UIButton!
@@ -34,7 +33,7 @@ class MusicPlayerViewController: UIViewController {
     func updateView(){
         if let track = player.activeTrack{
             let url = NSURL(string: track.artworkUri!)
-            blurredBackImage.sd_setImageWithURL(url)
+           
             artworkImageView.sd_setImageWithURL(url)
             
             trackTitle.text = track.title
